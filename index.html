@@ -71,147 +71,33 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-HTTP 框架修炼之道" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-http摆烂成仙" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/01/HTTP%20%E6%A1%86%E6%9E%B6%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93/" class="article-date">
-  <time class="dt-published" datetime="2022-06-01T10:47:00.121Z" itemprop="datePublished">2022-06-01</time>
+    <a href="/2022/06/01/http%E6%91%86%E7%83%82%E6%88%90%E4%BB%99/" class="article-date">
+  <time class="dt-published" datetime="2022-06-01T10:50:04.000Z" itemprop="datePublished">2022-06-01</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/01/http%E6%91%86%E7%83%82%E6%88%90%E4%BB%99/">http摆烂成仙</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="HTTP框架-Hypertext-Transfer-Protocol"><a href="#HTTP框架-Hypertext-Transfer-Protocol" class="headerlink" title="HTTP框架(Hypertext Transfer Protocol)"></a>HTTP框架(Hypertext Transfer Protocol)</h1><h2 id="一、是什么"><a href="#一、是什么" class="headerlink" title="一、是什么"></a>一、是什么</h2><p>超文本传输协议（Hyper Text Transfer Protocol，HTTP）是一个简单的请求-响应协议，它通常运行在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/TCP/33012">TCP</a>之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。请求和响应消息的头以<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ASCII/309296">ASCII</a>形式给出；而消息内容则具有一个类似<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/MIME/2900607">MIME</a>的格式。</p>
-<h3 id="version-0-9"><a href="#version-0-9" class="headerlink" title="version(0.9)"></a>version(0.9)</h3><p>0.9协议是适用于各种数据信息的简洁快速协议，但是远不能满足日益发展的各种应用的需要。0.9协议就是一个交换信息的无序协议，仅仅限于文字。由于无法进行内容的协商，在双发的握手和协议中，并有规定双发的内容是什么，也就是图片是无法显示和处理的</p>
-<h3 id="version-1-0"><a href="#version-1-0" class="headerlink" title="version(1.0)"></a>version(1.0)</h3><p>到了1.0协议阶段，也就是在1982年，Tim Berners-Lee提出了HTTP&#x2F;1.0。在此后的不断丰富和发展中，HTTP&#x2F;1.0成为最重要的面向事务的应用层协议。该协议对每一次请求&#x2F;响应建立并拆除一次连接。其特点是简单、易于管理，所以它符合了大家的需要，得到了广泛的应用。</p>
-<h3 id="version-1-1"><a href="#version-1-1" class="headerlink" title="version(1.1)"></a>version(1.1)</h3><p>在1.0协议中，双方规定了连接方式和连接类型，这已经极大扩展了HTTP的领域，但对于互联网最重要的速度和效率，并没有太多的考虑。毕竟，作为协议的制定者，当时也没有想到HTTP会有那么快的普及速度。 </p>
-<h2 id="二、为什么需要协议"><a href="#二、为什么需要协议" class="headerlink" title="二、为什么需要协议"></a>二、为什么需要协议</h2><h3 id="1、需要明确的边界"><a href="#1、需要明确的边界" class="headerlink" title="1、需要明确的边界"></a>1、需要明确的边界</h3><p>start-end</p>
-<h3 id="2、能够携带信息"><a href="#2、能够携带信息" class="headerlink" title="2、能够携带信息"></a>2、能够携带信息</h3><p>带了什么信息，信息的类型</p>
-<h2 id="三、协议里有什么"><a href="#三、协议里有什么" class="headerlink" title="三、协议里有什么"></a>三、协议里有什么</h2><h3 id="1、请求行-x2F-状态行"><a href="#1、请求行-x2F-状态行" class="headerlink" title="1、请求行&#x2F;状态行"></a>1、请求行&#x2F;状态行</h3><p>请求行：方法名、url、协议版本（POST &#x2F;sis HTTP&#x2F;1.1）</p>
-<p>状态行：协议版本、状态码、状态码描述（HTTP1.1 200 OK）</p>
-<h3 id="2、请求头-x2F-响应头"><a href="#2、请求头-x2F-响应头" class="headerlink" title="2、请求头&#x2F;响应头"></a>2、请求头&#x2F;响应头</h3><p>协议约定、业务相关</p>
-<h3 id="3、请求体-x2F-响应体"><a href="#3、请求体-x2F-响应体" class="headerlink" title="3、请求体&#x2F;响应体"></a>3、请求体&#x2F;响应体</h3><p>body</p>
-<h2 id="4、协议请求流程"><a href="#4、协议请求流程" class="headerlink" title="4、协议请求流程"></a>4、协议请求流程</h2><p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220528163344158.png" alt="image-20220528163344158"></p>
-<h2 id="5、不足与展望"><a href="#5、不足与展望" class="headerlink" title="5、不足与展望"></a>5、不足与展望</h2><h3 id="HTTP1"><a href="#HTTP1" class="headerlink" title="HTTP1"></a>HTTP1</h3><h4 id="队头阻塞：延迟高"><a href="#队头阻塞：延迟高" class="headerlink" title="队头阻塞：延迟高"></a>队头阻塞：延迟高</h4><p>队头阻塞是指当顺序发送的请求序列中的一个请求因为某种原因被阻塞时，在后面排队的所有请求也一并被阻塞，会导致客户端迟迟收不到数据。</p>
-<h5 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h5><p>1、将同一页面的资源分散到不同域名下，提升链接上限。虽然能公用一个TCP管道，但是在一个管道中同一时刻只能处理一个请求，在当前的请求没有结束之前，其他的请求只能处于阻塞状态。</p>
-<p>2、减少请求数量</p>
-<p>3、内联资源：css、base64图片等</p>
-<p>4、合并小文件减少资源数</p>
-<h4 id="无状态特性：阻碍交互"><a href="#无状态特性：阻碍交互" class="headerlink" title="无状态特性：阻碍交互"></a>无状态特性：阻碍交互</h4><p>无状态是指协议对于链接状态没有记忆能力。纯净的HTTP是没有cookie等机制的，每一个链接都是一个新的链接，上一次请求验证了用户名密码，而下一次请求服务器并不知道它与上一条请求有何关联，换句话说就是掉登录态。</p>
-<h4 id="传输效率低：比起udp"><a href="#传输效率低：比起udp" class="headerlink" title="传输效率低：比起udp"></a>传输效率低：比起udp</h4><h4 id="明文传输：不安全"><a href="#明文传输：不安全" class="headerlink" title="明文传输：不安全"></a>明文传输：不安全</h4><h3 id="HTTP2"><a href="#HTTP2" class="headerlink" title="HTTP2"></a>HTTP2</h3><h4 id="多路复用：解决对头阻塞"><a href="#多路复用：解决对头阻塞" class="headerlink" title="多路复用：解决对头阻塞"></a>多路复用：解决对头阻塞</h4><p>一个域名对应一个链接，一个流代表了一个完整的请求-响应过程。帧是最小的数据单位，每个帧会标识出该帧属于那个流，流也就是多个帧组成的数据流。多路复用，就是在一个TCP连接中可以存在多个流。</p>
-<h4 id="头部压缩：解决巨大的HTTP头部"><a href="#头部压缩：解决巨大的HTTP头部" class="headerlink" title="头部压缩：解决巨大的HTTP头部"></a>头部压缩：解决巨大的HTTP头部</h4><p>使用专门的HPACK算法，每次请求和响应只发送差异头部，一般可以达到50%-80%的高压缩率。</p>
-<h4 id="服务端推送：填补空缺"><a href="#服务端推送：填补空缺" class="headerlink" title="服务端推送：填补空缺"></a>服务端推送：填补空缺</h4><h4 id="请求优先级：先获取重要数据"><a href="#请求优先级：先获取重要数据" class="headerlink" title="请求优先级：先获取重要数据"></a>请求优先级：先获取重要数据</h4><p>虽然无限的并发流解决了对头阻塞的问题，但如果带宽受限，客户端可能会因为阻塞通道而阻止请求。在网络通道被非关键资源阻塞时，高优先级的请求会被优先处理。</p>
-<h4 id="二进制协议："><a href="#二进制协议：" class="headerlink" title="二进制协议："></a>二进制协议：</h4><p>在应用层使用二进制分帧的形式传输，因此也引入了新的通信单位：<code>帧、消息、流</code></p>
-<p>分帧的好处：服务器单位时间内接受的请求变多，可以提高并发数，最重要的是，为多路复用提供了底层支持。</p>
-<h4 id="缺陷："><a href="#缺陷：" class="headerlink" title="缺陷："></a>缺陷：</h4><h5 id="1、tcp以及tcp-tls建立链接的延时"><a href="#1、tcp以及tcp-tls建立链接的延时" class="headerlink" title="1、tcp以及tcp+tls建立链接的延时"></a>1、tcp以及tcp+tls建立链接的延时</h5><p>Tcp链接需要和服务器进行三次握手，即消耗完1.5个RTT之后才能进行数据传输。</p>
-<p>TLS连接有两个版本（TLS1.2和TLS1.3）,每个版本建立连接所花的时间不同，大致需要1-2个RTT。</p>
-<p>RTT（Round-Trip Time）</p>
-<p>往返时延。表示从发送端发送数据开始，到发送端接受来自接收端的确认（接受端收到数据后便立即发送确认）总共经历的时延。</p>
-<h5 id="2、TCP的对头阻塞并没有彻底解决"><a href="#2、TCP的对头阻塞并没有彻底解决" class="headerlink" title="2、TCP的对头阻塞并没有彻底解决"></a>2、TCP的对头阻塞并没有彻底解决</h5><p>TCP为了保证可靠传输，有一个<code>超时重传</code>机制，丢失的包必须等待确认重传确认。HTTP2出现丢包时，整个TCP都要等待重传，那么就会阻塞该TCP连接中的所有请求。</p>
-<p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220530094918332.png" alt="image-20220530094918332"></p>
-<p>RTO(Retransmission Timeout);RTO是一个动态值，会根据网络的改变而改变，RTO是根据给定连接的往返时间RTT计算出来的。接收方但返回的ACK是希望收到的下一组包的序列号</p>
-<h5 id="3、多路复用导致服务器压力上升"><a href="#3、多路复用导致服务器压力上升" class="headerlink" title="3、多路复用导致服务器压力上升"></a>3、多路复用导致服务器压力上升</h5><p>多路复用没有限制同时请求数。请求的平均数量与往常相同。但实际上会有许多请求的短暂爆发，因为客户端发送请求是同时发送大批量请求，导致瞬时QPS暴增。</p>
-<h5 id="4、多路复用容易Timeout"><a href="#4、多路复用容易Timeout" class="headerlink" title="4、多路复用容易Timeout"></a>4、多路复用容易Timeout</h5><p>大批量的请求同时发送，由于HTTP2连接内存在多个并行的流，而网络带宽和服务器资源有限，每个流的资源会被稀释，虽然他们开始时间相差更短，但却都有可能超时。</p>
-<p>即使是使用Nginx这样的负载均衡处理器，想正确进行节流也可能很棘手，其次，就算你向应用程序引入或调整排队机制，但一次能处理的连接也是有限的。如果对请求进行排队，还要注意在相应超时后丢弃请求，以避免浪费不必要的资源。</p>
-<h4 id="QUIC（基于UDP实现）"><a href="#QUIC（基于UDP实现）" class="headerlink" title="QUIC（基于UDP实现）"></a>QUIC（基于UDP实现）</h4><p>解决对头阻塞</p>
-<p>加密减少握手次数</p>
-<p>集成了TLS1.3</p>
-<p>支持快速启动</p>
-<h1 id="HTTP框架设计与实现"><a href="#HTTP框架设计与实现" class="headerlink" title="HTTP框架设计与实现"></a>HTTP框架设计与实现</h1><h2 id="1、分层设计"><a href="#1、分层设计" class="headerlink" title="1、分层设计"></a>1、分层设计</h2><h3 id="（1）应用层设计"><a href="#（1）应用层设计" class="headerlink" title="（1）应用层设计"></a>（1）应用层设计</h3><p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220528163924463.png" alt="image-20220528163924463"></p>
-<p>这里大概列了一些在设计 api 时需要考虑的点。</p>
-<p>易用性：提供一些合理的 api。</p>
-<p>可理解性：使用主流的概念，如 ctx.Body(), ctx.GetBody()，不要用 ctx.BodyA()<!--谁知道A是什么呢--></p>
-<p>简单性：常用的 API 放到上层，误用&#x2F;低频 API 放到下层，如ctx.Request.Header.Peek(key)要写为ctx.GetHeader(key)，<!--因为很常用--></p>
-<p>可见性：最小暴露原则，不需要暴露的 API 不暴露，可以抽象为接口。</p>
-<p>冗余性：不需要冗余或能通过其他 API 组合得到的 API</p>
-<p>兼容性：尽量避免 break change，做好版本管理。</p>
-<h3 id="（2）中间件设计"><a href="#（2）中间件设计" class="headerlink" title="（2）中间件设计"></a>（2）中间件设计</h3><p>1、配合Handler实现一个完整的请求处理生命周期</p>
-<p>2、拥有预处理与后处理逻辑</p>
-<p>3、可以注册多中间件</p>
-<p>4、对上层模块用户逻辑模块易用</p>
-<p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220528165050632.png" alt="image-20220528165050632"></p>
-<h4 id="1、实现预处理和后处理那就是在调用函数"><a href="#1、实现预处理和后处理那就是在调用函数" class="headerlink" title="1、实现预处理和后处理那就是在调用函数"></a>1、实现预处理和后处理那就是在调用函数</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">MiddleWare</span><span class="params">(some parem)</span></span>&#123;</span><br><span class="line">	<span class="comment">//预处理</span></span><br><span class="line">	...</span><br><span class="line">	next()<span class="comment">//处理函数</span></span><br><span class="line">	<span class="comment">//后处理</span></span><br><span class="line">	...	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、路由上可以注册多个中间件，也要满足请求级别有效"><a href="#2、路由上可以注册多个中间件，也要满足请求级别有效" class="headerlink" title="2、路由上可以注册多个中间件，也要满足请求级别有效"></a>2、路由上可以注册多个中间件，也要满足请求级别有效</h4><p>只需要将<code>Middleware</code>设计为和<code>Handler</code>相同就行</p>
-<h4 id="3、用户如果不主动调用下个处理函数"><a href="#3、用户如果不主动调用下个处理函数" class="headerlink" title="3、用户如果不主动调用下个处理函数"></a>3、用户如果不主动调用下个处理函数</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Middleware</span><span class="params">(some param)</span></span>&#123;</span><br><span class="line">	<span class="comment">//一些操作</span></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果用户只有预处理逻辑，没有后处理逻辑怎么办呢？比如只想完成一些初始化。考虑到用户真正希望执行的是业务逻辑，那我们可以主动帮用户调用一下之后的中间件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func (ctx *Context) next()&#123;</span><br><span class="line">	ctx.index++</span><br><span class="line">	for ctx.index&lt; len()&#123;</span><br><span class="line">		ctx.handlers[ctx.index]()</span><br><span class="line">		ctx.index++</span><br><span class="line">		//保证index递增</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4、出现异常想停止怎么办"><a href="#4、出现异常想停止怎么办" class="headerlink" title="4、出现异常想停止怎么办"></a>4、出现异常想停止怎么办</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(ctx *Context)</span></span>About()&#123;</span><br><span class="line">	ctx.index = IndexMax</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>直接使变量满足跳出条件</p>
-<h4 id="5、调用链"><a href="#5、调用链" class="headerlink" title="5、调用链"></a>5、调用链</h4><p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220528175115308.png" alt="image-20220528175115308"></p>
-<!--有点get不到意思-->
-
-<h3 id="（3）路由设计"><a href="#（3）路由设计" class="headerlink" title="（3）路由设计"></a>（3）路由设计</h3><p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220528175334562.png" alt="image-20220528175334562"></p>
-<h4 id="1、一般处理方法（map）"><a href="#1、一般处理方法（map）" class="headerlink" title="1、一般处理方法（map）"></a>1、一般处理方法（map）</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">map</span>[<span class="type">string</span>]handles</span><br></pre></td></tr></table></figure>
-
-<p>缺点：只能处理静态路由</p>
-<h4 id="2、较好的处理方法-前缀匹配树"><a href="#2、较好的处理方法-前缀匹配树" class="headerlink" title="2、较好的处理方法(前缀匹配树)"></a>2、较好的处理方法(前缀匹配树)</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/a/b/c、/a/b/d</span><br></pre></td></tr></table></figure>
-
-<p>如何处理带参数的路由？</p>
-<p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220528175654235.png" alt="image-20220528175654235"></p>
-<h4 id="3、如何匹配HTTP方法？-Map-前缀匹配树"><a href="#3、如何匹配HTTP方法？-Map-前缀匹配树" class="headerlink" title="3、如何匹配HTTP方法？(Map+前缀匹配树)"></a>3、如何匹配HTTP方法？(Map+前缀匹配树)</h4><p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220528175759361.png" alt="image-20220528175759361"></p>
-<h4 id="4、如何添加多处理函数"><a href="#4、如何添加多处理函数" class="headerlink" title="4、如何添加多处理函数"></a>4、如何添加多处理函数</h4><p>使用<code>list</code>存储<code>handler</code></p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node <span class="keyword">struct</span>&#123;</span><br><span class="line">	...</span><br><span class="line">	handles app.HandlersChain</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="（4）协议层设计"><a href="#（4）协议层设计" class="headerlink" title="（4）协议层设计"></a>（4）协议层设计</h3><p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220529083237631.png" alt="image-20220529083237631"></p>
-<h3 id="（5）网络层设计"><a href="#（5）网络层设计" class="headerlink" title="（5）网络层设计"></a>（5）网络层设计</h3><h4 id="BIO"><a href="#BIO" class="headerlink" title="BIO"></a>BIO</h4><p>这是一个比较经典的 go 的写法，那它就是一种 block io 编程模型。因为假如说你在读数据的时候读到了一半，它就读在这里了，它啥也干不了。</p>
-<p><code>go net</code>就是一个非常典型的<code>BIO</code>，由用户管理buffer</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>&#123;</span><br><span class="line">		conn,_ :=listener.Acccept()</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span>&#123;</span><br><span class="line">			conn.Read(request)</span><br><span class="line">			handle...<span class="comment">//读一半啥也干不了，浪费资源，这个goroutine就会被浪费许多</span></span><br><span class="line">			conn.Write(response)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><p>那有没有解决这种办法的方式，也比较简单，我们在中间引入一种通知的机制，就是当他数据有一半的时候，我让客服小姐姐也去干别的事情。那当它后续把整个包都已经发完的时候，我们再去通知他去处理，这样的话就不会阻塞。这就是<code>non block IO</code> 的一种编程模式，它就是非阻塞的。我们可以看一下刚才那段伪代码改成这段伪代码之后是什么样子，就是上面我们在第一个go function里面还是维护这个连接， accept 但是每次我们拿到这个连接之后，我们把它加到一个监听器里面，比如说 add 这个链接，然后我们在另外一个部分里面去轮询这个 monitor 就是监听器，我们搜索可读的连接数。因为这里 monitor 它已经知道有数据了，但我们这个服务方式去执行的时候可能是 read 这时候就能拿到完整的数据并处理，然后再返回，这个时候整个流程是没有阻塞的。 </p>
-<p><code>netpoll</code>是一个很出名的<code>NIO</code>,由网络库管理buffer</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">go func&#123;</span><br><span class="line">	for&#123;</span><br><span class="line">		readableConns,_:=Monitor(conns)</span><br><span class="line">		for conn:=range raedableConns&#123;</span><br><span class="line">			go func()&#123;</span><br><span class="line">				conn.Read(request)</span><br><span class="line">				handle...</span><br><span class="line">				conn.Write(response)</span><br><span class="line">			&#125;()</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="3、性能优化"><a href="#3、性能优化" class="headerlink" title="3、性能优化"></a>3、性能优化</h1><h2 id="3-1针对网络库的优化"><a href="#3-1针对网络库的优化" class="headerlink" title="3.1针对网络库的优化"></a>3.1针对网络库的优化</h2><h3 id="（1）go-net-BIO"><a href="#（1）go-net-BIO" class="headerlink" title="（1）go net(BIO)"></a>（1）<code>go net</code>(BIO)</h3><h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>1、存下全部Header</p>
-<p>2、减少系统调用次数</p>
-<p>3、能够复用内存</p>
-<p>4、能够多次读</p>
-<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><p><code>go net with bufio</code>绑定一块儿缓冲区</p>
-<p>标准库：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Conn <span class="keyword">interface</span>&#123;</span><br><span class="line">	Read(b []<span class="type">byte</span>)</span><br><span class="line">	Write(b []<span class="type">byte</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>基于此，我们可以对勾在勾标准库的接口上面封装一层 buffer 说也就是用一块用一个常用的一种优化手段。就是绑定在这个连接上面，绑定一块缓冲区。那根据我们在内部的一个调研，也发现大部分的包都是在 4k 以下的，所以我们可以绑定一块大小为 4k 左右的一个缓冲区，这样对内存的压力也不是很大。那这个还那我们再设计接那我们这个再设计接口。那首先需要一个我在读的时候让读指针不动，我下次还能够在这里进行读，也就是 Peek；以及说我们既然就能够让读指针不动，那我们就需要一个接口，让读指针进行一个移动，也就是 Discard。最后呢我们还需要回收这块内存，希望下一次请求能够复用之前的空间，也就是 Release 接口。</p>
-<p>解决方案：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Reader <span class="keyword">interface</span>&#123;</span><br><span class="line">	Peek(n <span class="type">int</span>)([]<span class="type">byte</span>,<span class="type">error</span>)</span><br><span class="line">	Discard(n <span class="type">int</span>)(discaered <span class="type">int</span>,err <span class="type">error</span>)</span><br><span class="line">	Release() <span class="type">error</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-net-poll-NIO"><a href="#2-net-poll-NIO" class="headerlink" title="(2)net poll(NIO)"></a>(2)<code>net poll</code>(NIO)</h3><h4 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h4><p>1、存下全部header</p>
-<p>2、拷贝出完整的Body</p>
-<h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><p><code>netpoll with nocopy peek</code></p>
-<p>分配足够大的<code>buffer</code></p>
-<p>限制最大<code>buffer size</code></p>
-<h2 id="2、针对协议的优化"><a href="#2、针对协议的优化" class="headerlink" title="2、针对协议的优化"></a>2、针对协议的优化</h2><h5 id="（1）、边界优化"><a href="#（1）、边界优化" class="headerlink" title="（1）、边界优化"></a>（1）、边界优化</h5><p>​		http协议呢,我们需要找到边界才能够判断它是完整的。那我们现在来复习一下上一节课的知识，我们需要找到的一个边界就是\r\n，每一个headerline的结束是\r\n，如果连续两个 \r\n\r\n 的话就说明 header 读完了。那咱们的字符串匹配算法呢其实有很多种，像在学校里大家都学过kmp啊，bm啊。这些算法可不可以用呢？那当然是可以了。快不快呢？当然不是最快了。这些算法针对的是任何两个字符串，没有其他条件了，至少需要进行一次预处理。那我们来看一下针对我们的http协议，他每次只需要匹配两个字符，并且都是\n的前面都是\r，杀鸡焉用宰牛刀，针对这种有特征的数据，那我们是不是就可以先找到 \n，再去判断\r就OK了，起来这样的复杂度其实是只要扫一遍就ok了。具体的代码我也在下面写了出来。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">index</span><span class="params">(b []<span class="type">byte</span> ,c []<span class="type">byte</span>)</span></span><span class="type">int</span>&#123;</span><br><span class="line">	<span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="built_in">len</span>(b);i++&#123;</span><br><span class="line">		<span class="keyword">if</span> b[i]==c&#123;</span><br><span class="line">			<span class="keyword">return</span> i</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>​		咱们现在思考一个问题，这个找到边界能不能更快呢？可能有一些同学说，那我这个算法再快，也要是<code>o(n)</code>的吧。这个算法的复杂度，我是没有想出来一个更好的解决办法。不过咱们上过一门课，叫计算机体系结构。这门课里面讲了<code>simd</code>。大家在刚听到这门课中讲SMD的时候，反应跟我当时是一样的，一脸懵逼，完全不知道有什么用。在这里，SIMD就可以派上用场。那个呃没有上过这门课的同学也没有关系。我简单讲一下这个东西。SIMD（Single Instruction Multiple Data）指令集，指单指令多数据流技术，可用一组指令对多组数据通进行并行操作。对于咱们的这个场景之前，咱们之前来说是一个一个进行相比。那咱们这次呢咱们可以多个相比，比如每次比16个。那自然效率就高了。那可能有一些同学说，那我不会写汇编，那怎么办呢？或者说这个汇编的难度太高了，那怎么办呢？不要急，咱们go语言呢，他官方已经为我们支持了SIMD技术，我们只要调用 bytes.Index() 函数，在满足条件的情况下，会自动使用 SIMD 指令集进行加速。这里我也把相关代码链接贴了出来，感兴趣的同学可以看一看。</p>
-<p>​		有的同学说例子太少？这里有一个使用 SIMD 加速的 json 解析库 sonic，有兴趣的话也可以了解一下，编解码速度已经能够达到和pb是同一个数量级的了。</p>
-<h4 id="（2）、Headers快速解析"><a href="#（2）、Headers快速解析" class="headerlink" title="（2）、Headers快速解析"></a>（2）、<code>Headers</code>快速解析</h4><p>再一个例子的话是说我们的 header 解析。那这个这里面的话其实大家可以看到我们针对我们图上的这个 header 其实也就是是叫做 host 的一个 header，我们在解析这个 host 这个 header 的时候，我们首先是对它的首字母进行的一个筛选，我们通过首字母直接筛选掉那种首字母，不为 H 的这一类 header 然后如果为 H 我们才会进入到我们真正的一个解析过程当中。这就已经筛掉了 25&#x2F;26 了对吧？如果通过字母来判断的话，应该是分成筛掉了 26 个字母里面的其他 25 个字母的可能性。通过这个来进行一个加速。然后同时我们针对这种 协议中的高频关键 header，像 host 这种，我们直接额外把它开辟的一块成员变量我们来直接把它存储了。那我们之后再需要用到这个 host 的时候，我们直接通过点 host 就能拿到它对应的一个 value 了。这就是我们针对于我们的特异化的这些 header 做了一个特异化的操作。 然后我们同时在管理的时候，我们可以看到我们是通过 byte slice 的方式来管理的，我们通过 append 操作去把这个 slice 给它填充起来。然后这个的目的其实就是为了我们更方便地去进行一个内存的管理。因为我们的整体的这个 header 的话，其实它会去做一个完整的复用，就包括我们请求结束之后，下一个请求来的时候，我们其实用的内存空间，一就是这个同一块内存空间，不会去额外地去做更多的一些内存分配了。同样的处理，我们还有 user agent content type content 以及 connection transfer encoding ，这也是我们平时非常耳熟能详的几个关键的一些 header 了</p>
-<p><u>针对特殊协议相关的 Headers 快速解析：</u></p>
-<ol>
-<li><u>通过 Header key 首字母快速筛除掉完全不可能的 key</u></li>
-<li><u>直接解析对应 value 到独立字段</u></li>
-<li><u>使用 byte slice 管理对应 header 存储，方便复用</u></li>
-</ol>
-<p>我们的一个 header 解析的一个特异化处理的一个优化，我们可以看我们整体的一个取舍。那我们取部分的话我们说我们针对我们的协议的核心字段我们进行了一个加速。然后我们同时我们采用 byteslice 而不是 map 来存储我们的 header 然后我们可以高效地去管理内存，方便我们每一次请求之间去复用这块内存。 OK 以及我们额外把这些 KV 我们把它解析到特定的成员变量中，保证我们去读取的时候是第一时间去读到的。 那我们有取，那肯定就有些舍对吧。我们舍掉了是什么呢？其实舍掉了就是对于普通的这些 header 我们没有做额外的特殊处理，因为那这种处理的话也是一个需要消耗计算资源的操作，可能会对性能造成影响。那我们对于普通的 header 的话是需要在真正使用的时候才知道是否存在对应的 key 这个时候是就去进行一次真正的一个解析。然后第二个的话就是大家可能感到疑惑，说我们为啥没有一个类似于 map 的结构来存储这类的 KV 那其实就是刚刚提到的我们因为 map 本身它在内存管理这一块的话没有一个比较非常好的一个实践方式，它内部的一些内存是通过自己的一些算法来维护的。所以我们没法是通过像我们的 byteslice 这样的一个方式来高效地去管理这块存储这就是我们舍掉的一些东西。</p>
-<h4 id="3-Header-key规范化"><a href="#3-Header-key规范化" class="headerlink" title="(3)Header key规范化"></a>(3)Header key规范化</h4><p>那我们接着看我们第二块就是我们的 header key 规范化。那我们刚刚提到 header key 规范化，它是一个什么概念呢？可以看到我们这里提到了是一个问号，问号，我们转换成 A 小写小写杠 B 大写 B 小写这一类。转换的话其实就是我们所谓的 header key 的一个规范化，其实它就是想把我们的 key 转换成这种类似于手这么大写的一个字符串，然后包括有一个中划线之后有一个接着首字母也会大写，这样就是我们的一个规范化。那我们在处理这类需求的时候，我们也是用了一个非常取巧的方式，可以看到我们的实现在我们左边，然后右边的话是我们的自己定义的两张表。这两张表一个叫做 to lower table 顾名思义就是把字母转成小写 table 第二个表就是把 to upper table 那就是把字母转成大写 table 那这两张表怎么用呢？其实是非常简单。我们可以看到左边我们直接把我们的对应的字母传递到我们的这个表里面来。这个表其实它就是一个 byte 数组，那我们的字母其实也是可以理解为是一个 byte 那我们把 byte 传递到我们的这个表表格里面来，然后查询到对应的返回，就是我们想要的一个大写或者小写了，那相当于我们直接是查表的方式，这个时时间复查得非常的低，应该是个 big o1 的一个查询方式。 OK 这就是我们在做 header key 的规范化的时候做的一个优化</p>
-<h2 id="热点资源池化"><a href="#热点资源池化" class="headerlink" title="热点资源池化"></a>热点资源池化</h2><p>​	我们的一个热点资源池化设计，这个也是我们在做 Golang 开发过程中一个比较熟悉的手段。首先的话其实我们可以看到背景其实我们一个请求请求进来之后，我们有一个叫做 requestcontext 的一个资源，是需要去贯穿这个请求的一个完整生命周期，包括这个请求需要的资源像 Request、Response、conn 等等，直到我们的一个响应回包给我们的 client 那这一块的话其实就伴随着说我们与请求是一一对应的。在高并发场景的话，那这块内存的分配以及释放对 GC 是一个非常大的一个压力。</p>
-<p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220529095242094.png" alt="image-20220529095242094"></p>
-<p>​		对于我们的这个这种场景的话，我们有一个叫做 context request context 池，我们把这个 request 放到池子里了。然后我们请求来的时候，我们池子里取出来一个，我们做一些初始化，然后把它进行一个 response 的一个返回，之后我们处理完又把它放回去。按这个看起来是一个比较有意思的一个做法，就是我们这大家就共用一个池子里的资源，那这样的话就可以明显地减少我们整个 GC 或者是一个 runtime 的一个压力。</p>
-<p><img src="C:\Users\xiaoweisuo\AppData\Roaming\Typora\typora-user-images\image-20220529095321962.png" alt="image-20220529095321962"></p>
-<p>​		那其实取的话就非常明显，可以看到我们有了一些内存分配的一个次数减少了，然后我们的复用能力也提高了，机制压力相应的就降低了，那性能就得到了提升。那舍掉的话其实就是我们再额外放回这个 request 刚才是到池子里之前的话，我们需要做一些复杂的 reset 操作，因为这个这块内存直接会被下一个请求去复用。那我们不做这类似 reset 初始化操作的话，那可能会有一些额外存在的值会对下一个请求造成一些影响。第二点的话说我们超出了一个请求生命周期的这个 request context 它就变得不再可靠。那我们既然都把它放回池子里，那里面的数据不保证在一些请求生命周期之外也是可靠了。那等这两个问题的话其实带来的就是我们在一旦出现这种类似于数据不一致的问题的时候，我们的定位难度也非常的大，这就是我们在这个设计里面舍掉了一个东西。那其实针对这个问题的话，其实我们内部已经在做一些更优化的一些设计，来避免这种数据不一致造成的一些问题。包括我们刚刚提到的在我们的应用层有一个专门的 context 模块，这一块的话这块设计的话之后也会有我们的一个更新之后，我们会以一个新的 feature 提供给大家。</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/01/HTTP%20%E6%A1%86%E6%9E%B6%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93/" data-id="cl3vgsgyi000174vtca18f73k" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/01/http%E6%91%86%E7%83%82%E6%88%90%E4%BB%99/" data-id="cl3vgwdrs0001h8vt9lc4cuix" data-title="http摆烂成仙" class="article-share-link">Share</a>
       
       
       
@@ -262,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/01/hello-world/" data-id="cl3vgsgyc000074vt1t19311d" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/01/hello-world/" data-id="cl3vgwdrn0000h8vtg1hi7mzj" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -305,7 +191,7 @@
       <ul>
         
           <li>
-            <a href="/2022/06/01/HTTP%20%E6%A1%86%E6%9E%B6%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93/">(no title)</a>
+            <a href="/2022/06/01/http%E6%91%86%E7%83%82%E6%88%90%E4%BB%99/">http摆烂成仙</a>
           </li>
         
           <li>
